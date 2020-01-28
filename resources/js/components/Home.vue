@@ -6,11 +6,21 @@
                     <div class="card-header">{{ translate('site.heading.home') }}</div>
 
                     <div class="card-body">
-                        <div class="info-banner">
+                        <div class="info-banner mb-3">
                             Linkedin-Skills
                         </div>
                         <div>
-                            <h5 class="mt-4 mb-2">Linkedin-Skills Portalının sizə verəcəyi üstünlüklər:</h5>
+                            <p>Linkedin sosial şəbəkəsi üzərində olan istifadəçilərin bacarıqlarının nə şəkildə
+                                bilmələrini test sualları, endorsement və işlədikləri proyektlərə baxmaqdan başqa
+                                yolla bilmək olmurdu. Lakin Linkedin-Skills portalı vasitəsi ilə hər bir şəxs bildiyi
+                                və ya öyrəndiyi bacarıqları yazmaq, həmin bacarıqlarla əlaqəli sualları sistemdə əlaqəli
+                                şəxslərdən soruşmaq imkanı və digər istifadəçilərə kömək edərək inkişaf etdirmək imkanı
+                                yaradılır. Beləliklə hər bir isitfadəçinin bacarığına uyğun verdiyi sual və cabavları
+                                asanlıqla baxmaq və dəyərləndirmək mümkün olur. Linkedin-Skills olaraq Linkedin sosial
+                                şəbəkəsinin missiyasına inanırıq və burada olan imkanların Linkedin-də olmasını
+                                arzu edirik.
+                            </p>
+                            <p class="mt-4 mb-2">Linkedin-Skills Portalının sizə verəcəyi üstünlüklər:</p>
                             <ol class="list-group">
                                 <li class="list-group-item">
                                     Bacarıq üzrə sualınızı birbaşa həmin sahə üzrə mütəxəssisləşmiş şəxslərə
