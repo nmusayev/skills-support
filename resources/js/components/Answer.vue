@@ -13,8 +13,8 @@
                     class="vote-icon fa fa-chevron-down" aria-hidden="true"></i>
                 <i
                     @click="makeBestAnswer()"
-                    :class="{selected: answer.is_best }"
-                    v-if="answer.is_best || (this.questionOwner && !this.answerOwner)"
+                    :class="{selected: parseInt(answer.is_best) }"
+                    v-if="parseInt(answer.is_best) || (this.questionOwner && !this.answerOwner)"
                     class="vote-icon fa fa-check" aria-hidden="true"></i>
             </div>
             <div class="col-sm-11 col-9">
