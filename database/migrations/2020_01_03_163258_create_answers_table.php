@@ -18,7 +18,7 @@ class CreateAnswersTable extends Migration
             $table->text('content');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('question_id');
-            $table->boolean('is_best')->default(false);
+            $table->tinyInteger('is_best')->default(0);
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')

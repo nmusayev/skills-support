@@ -126,7 +126,7 @@ class AnswerController extends Controller
 
 
 
-//        return Helper::paginateCollection($answers, 5);;
+//        return Helper::paginateCollection($answers, 5);
 
         return AnswerResource::collection(Helper::paginateCollection($answers, 5));
 
