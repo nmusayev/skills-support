@@ -16,18 +16,18 @@ class DatabaseSeeder extends Seeder
 
 //        factory(\App\Skill::class, 1000)->create();
 
-        factory(\App\User::class, 50)->create()->each(function($user) {
+        factory(\App\User::class, 20)->create()->each(function($user) {
             $user->skills()->saveMany(\App\Skill::all()->random(rand(1, 25)));
             $user->languages()->saveMany(\App\Language::all()->random(rand(1, 10)));
             $user->save();
         });
 
-        factory(\App\Question::class, 2000)->create()->each(function($question) {
-            $question->skills()->saveMany(\App\Skill::all()->random(rand(1, 10)));
+        factory(\App\Question::class, 50)->create()->each(function($question) {
+            $question->skills()->saveMany(\App\Skill::all()->random(rand(1, 5)));
             $question->save();
         });
 
-        factory(\App\Answer::class, 4000)->create();
-        factory(\App\Vote::class, 1000)->create();
+        factory(\App\Answer::class, 50)->create();
+        factory(\App\Vote::class, 80)->create();
     }
 }

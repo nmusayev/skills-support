@@ -11,7 +11,7 @@
             <label for="content">{{ translate('site.label.q_body') }}</label>
             <textarea class="form-control"
                       name="content" v-model="form.content"
-                      placeholder="Your question goes here.."
+                      placeholder="Your optional question body goes here.."
                       id="content" rows="3"></textarea>
         </div>
 

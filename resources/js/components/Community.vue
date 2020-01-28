@@ -8,7 +8,7 @@
                     <div class="card-body">
                         <add-question></add-question>
 
-                        <h5 class="mt-4 mb-3" v-if="questions.data.length">{{ translate('site.label.recently_asked') }}:</h5>
+                        <h5 class="mt-4 mb-3" v-if="labelShow">{{ translate('site.label.recently_asked') }}:</h5>
                         <div class="recent-questions">
                             <router-link tag="div"
                                          v-for="question in questions.data"
@@ -46,6 +46,7 @@
             return {
                 questions: [],
                 linkData: {},
+                labelShow: true,
             }
         },
         methods: {
@@ -55,6 +56,10 @@
                     .then(res => {
                         // console.log(res.data);
                         this.questions = res.data;
+
+                        if(this.questions.data.length === 0) {
+                            this.labelShow = false;
+                        }
 
                         this.linkData = {
                             next_page_url: this.questions.links.next,

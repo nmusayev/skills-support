@@ -62,7 +62,12 @@ class Helper
         return $users->filter(function($user) use ($question) {
             $question_skill_ids = $question->skills->pluck('id')->toArray();
             $user_skill_ids = $user->skills->pluck('id')->toArray();
-            return  empty(array_diff($question_skill_ids, $user_skill_ids));
+
+            // exactly equal skill in person
+//            return  empty(array_diff($question_skill_ids, $user_skill_ids));
+
+            // For now at least one skill related to added question
+            return count(array_diff($question_skill_ids, $user_skill_ids)) < count($question_skill_ids);
         });
     }
 }

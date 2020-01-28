@@ -67,6 +67,6 @@ Route::get('skill/{skill}/user/{user}', 'SkillController@showWithId');
 
 // Question-Detail
 Route::get('question/{question}', 'QuestionController@show');
+//Route::get('question/{question}/public-view', 'QuestionController@showToPublic');
 Route::get('/question/{question}/answer', 'AnswerController@questionAnswers');
 Route::get('/question/search/{key}', 'QuestionController@search');
-

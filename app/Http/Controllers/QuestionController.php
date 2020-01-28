@@ -39,7 +39,7 @@ class QuestionController extends Controller
         //
         $validator = Validator::make($request->all(), [
             'title' => 'required',
-            'content' => 'required',
+//            'content' => 'required',
             'language_id' => 'required',
             'skills' => 'required|array',
             'skills.*' => 'integer',
@@ -57,7 +57,7 @@ class QuestionController extends Controller
         // Creating Question
         $question = Question::create([
             'title' => $request['title'],
-            'content' => $request['content'],
+            'content' => isset($request['content']) ? $request['content'] : null,
             'user_id' => $user->id,
             'language_id' => isset($request->language_id) ? intval($request->language_id) : null
         ]);
@@ -81,8 +81,8 @@ class QuestionController extends Controller
     public function show(Question $question)
     {
         // Checking for currently auth user has notification about this question, if has markAsRead that notification
-        if(isset(auth()->user()->unreadNotifications)) {
-            foreach (auth()->user()->unreadNotifications as $notification) {
+        if(auth('api')->check()) {
+            foreach (auth('api')->user()->unreadNotifications as $notification) {
                 if($notification->data['question_id'] == $question->id) {
                     $notification->markAsRead();
                 }
@@ -169,6 +169,7 @@ class QuestionController extends Controller
         // For Now, just Language Related Questions
         $relatedQuestions = Question::whereIn('language_id', auth()->user()->languages->pluck('id')->toArray())
             ->orderBy('created_at', 'desc')->paginate(15);
+//        $relatedQuestions = [];
 
         return QuestionResource::collection($relatedQuestions);
     }

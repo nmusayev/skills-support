@@ -6,7 +6,7 @@
             </a>
         </h5>
         <p>
-            <span v-if="limited">
+            <span v-if="limited && question.content">
                 {{ question.content.substring(0, 180) }}
             </span>
             <span v-else>
