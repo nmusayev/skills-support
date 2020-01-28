@@ -161,10 +161,14 @@ class QuestionController extends Controller
         $user_skill_ids = auth()->user()->skills->pluck('id')->toArray();
 
         // 2. Querying Question for Skills and Language
-        $relatedQuestions = Question::whereHas('skills', function(Builder $query) use ($user_skill_ids) {
-            $query->whereIn('skills.id', $user_skill_ids);
-        })->whereIn('language_id', auth()->user()->languages->pluck('id')->toArray())
-            ->orderBy('created_at', 'desc')->paginate(10);
+//        $relatedQuestions = Question::whereHas('skills', function(Builder $query) use ($user_skill_ids) {
+//            $query->whereIn('skills.id', $user_skill_ids);
+//        })->whereIn('language_id', auth()->user()->languages->pluck('id')->toArray())
+//            ->orderBy('created_at', 'desc')->paginate(10);
+
+        // For Now, just Language Related Questions
+        $relatedQuestions = Question::whereIn('language_id', auth()->user()->languages->pluck('id')->toArray())
+            ->orderBy('created_at', 'desc')->paginate(15);
 
         return QuestionResource::collection($relatedQuestions);
     }

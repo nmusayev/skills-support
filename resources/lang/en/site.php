@@ -27,7 +27,7 @@ return [
         'email' => 'E-Mail Address',
         'password' => 'Password',
         'remember' => 'Remember Me',
-        'name' => 'Name',
+        'name' => 'Full Name',
         'password_confirm' => 'Confirm Password',
         'languages' => 'Languages',
         'point' => 'Overall Point',

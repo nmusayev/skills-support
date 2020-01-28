@@ -27,7 +27,7 @@ return [
         'email' => 'Elektron poçt ünvanı',
         'password' => 'Şifrə',
         'remember' => 'Xatırla',
-        'name' => 'Ad',
+        'name' => 'Ad və Soyad',
         'password_confirm' => 'Parolu təsdiqi',
         'languages' => 'Dillər',
         'point' => 'Ümumi Xal',
