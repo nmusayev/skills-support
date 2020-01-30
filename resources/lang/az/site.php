@@ -64,7 +64,42 @@ return [
         'users' => 'İstifadəçilər',
         'question_detail' => 'Sual Ətraflı',
         'home' => '"Linkedin-Skills"-ə xoş gəldiniz!',
-    ]
+    ],
+    'content' => [
+        'home' => '
+                            <p>Linkedin sosial şəbəkəsi üzərində olan istifadəçilərin bacarıqlarının nə şəkildə
+                                bilmələrini test sualları, endorsement və işlədikləri proyektlərə baxmaqdan başqa
+                                yolla bilmək olmurdu. Lakin Linkedin-Skills portalı vasitəsi ilə hər bir şəxs bildiyi
+                                və ya öyrəndiyi bacarıqları yazmaq, həmin bacarıqlarla əlaqəli sualları sistemdə əlaqəli
+                                şəxslərdən soruşmaq imkanı və digər istifadəçilərə kömək edərək inkişaf etdirmək imkanı
+                                yaradılır. Beləliklə hər bir isitfadəçinin bacarığına uyğun verdiyi sual və cabavları
+                                asanlıqla baxmaq və dəyərləndirmək mümkün olur. Linkedin-Skills olaraq Linkedin sosial
+                                şəbəkəsinin missiyasına inanırıq və burada olan imkanların Linkedin-də olmasını
+                                arzu edirik.
+                            </p>
+                            <p class="mt-4 mb-2">Linkedin-Skills Portalının sizə verəcəyi üstünlüklər:</p>
+                            <ol class="list-group">
+                                <li class="list-group-item">
+                                    Bacarıq üzrə sualınızı birbaşa həmin sahə üzrə mütəxəssisləşmiş şəxslərə
+                                    ünvanlanması və tez bir zamanda sualınızın cavablandırılması. Sistemdə sualı
+                                    ünvanlayan zaman dil və bacarıq seçimi olduğundan, həmin sual spesifik olaraq
+                                    həmin dil və bacarıq sahibi şəxslərə yönləndirilməkdədir.
+                                </li>
+                                <li class="list-group-item">
+                                    Öz işlədiyiniz sahə üzrə əlda etdiyiniz bilik və bacarıqlarınızı digər şəxslərə
+                                    kömək etməklə cəmiyyətə fayda vermək və sistem tərəfində faydalı cavablarınıza
+                                    görə profilinizin önə çəkilməsi. İstifadəçilərin axtarışı zamanı istifadəçi nəticələri
+                                    onların topladıqları ballara görə yuxarıdan aşağıya doğru düzülmüşdür.
+                                </li>
+                                <li class="list-group-item">
+                                    İşə götürən tərəf kimi nəzərdə tutulan istifadəçinin axtarışı və
+                                    profilə baxış zamanı hər bacarıq üzrə verdiyi cavabların və sualların siyahısına
+                                    asanlıqla nəzarət edərək bacarıqların nisbi qiymətləndirilməsinin
+                                    həyata keçirilməsi. Digər tərəfdən bu istifadəçinin asanlıqla iş tapması və ya işə
+                                    qəbul prosesinin tezləşməsində yardımçı olacaqdır.
+                                </li>
+                            </ol>',
+    ],
 
 ];
 
