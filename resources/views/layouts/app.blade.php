@@ -61,9 +61,9 @@
                     <!-- Authentication Links -->
                     @guest
                         <li class="nav-item">
-                            <router-link exact-active-class="active" tag="a" to="/users" class="nav-link">
+                            <a exact-active-class="active" href="/users" class="nav-link">
                                 {{ __('site.nav.users') }}
-                            </router-link>
+                            </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('login') }}">{{ __('site.nav.login') }}</a>
