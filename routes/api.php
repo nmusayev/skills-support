@@ -21,7 +21,6 @@ Route::group(['middleware' => 'auth:api'], function()
 {
     // GET and UPDATE USER
     Route::get('user', 'UserController@details');
-    Route::get('user/all/{name?}', 'UserController@all');
 //    Route::post('user/all/', 'UserController@search');
     Route::put('user', 'UserController@update');
     Route::post('/updateProfileImage', 'UserController@updateProfileImage');
@@ -59,6 +58,7 @@ Route::group(['middleware' => 'auth:api'], function()
 
 
 // GET USER, SKILL, LANGUAGE with USER ID
+Route::get('user/all/{name?}', 'UserController@all');
 Route::get('user/{user}', 'UserController@detailsWithId');
 Route::get('skill/user/{user}', 'SkillController@skillsWithId');
 Route::get('language/user/{user}', 'LanguageController@languagesWithId');

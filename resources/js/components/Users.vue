@@ -99,7 +99,7 @@
         },
         mounted() {
             // Check for Authentication [Redirecting if not logged in]
-            helpers.redirectIfNotLoggedId(this.$router);
+            // helpers.redirectIfNotLoggedId(this.$router);
 
             // Getting Recently Questions
             this.getUsers();

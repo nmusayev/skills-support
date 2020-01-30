@@ -55,7 +55,7 @@
                 let key = this.$route.params.key;
                 axios.get(`/question/search/${key}?page=` + page)
                     .then(res => {
-                        console.log(res.data);
+                        // console.log(res.data);
                         this.questions = res.data;
 
                         this.linkData = {

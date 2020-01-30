@@ -61,6 +61,11 @@
                     <!-- Authentication Links -->
                     @guest
                         <li class="nav-item">
+                            <router-link exact-active-class="active" tag="a" to="/users" class="nav-link">
+                                {{ __('site.nav.users') }}
+                            </router-link>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ route('login') }}">{{ __('site.nav.login') }}</a>
                         </li>
                         @if (Route::has('register'))
