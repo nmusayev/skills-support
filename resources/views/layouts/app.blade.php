@@ -206,9 +206,9 @@
 
     <footer class="fixed-bottom text-center">
         <ul class="list-unstyled list-inline mb-0">
-            <li class="list-inline-item">support@linkedin-skills.com |</li>
+            <li class="list-inline-item">support@skills-support.com |</li>
             <li class="list-inline-item">(+994)55-834-7803 |</li>
-            <li class="list-inline-item">{{ now()->year }} &copy; Linkedin-Skills</li>
+            <li class="list-inline-item">{{ now()->year }} &copy; Skills-Support</li>
         </ul>
     </footer>
 </div>

@@ -63,20 +63,20 @@ return [
         'community' => 'Community - Ask your question',
         'users' => 'Users',
         'question_detail' => 'Question Detail',
-        'home' => 'Welcome to Linkedin-Skills!',
+        'home' => 'Welcome to Skills-Support!',
     ],
     'content' => [
         'home' => "
                 <p>Except for test questions, endorsement and the projects there was no way to know detailed information
                 about
                 users' abilities on Linkedin's social network. However,
-                 the Linkedin-Skills portal provides an opportunity for anyone to record what they already
+                 the Skills-Support portal provides an opportunity for anyone to record what they already
                  know or learn, ask questions related to those skills, and develop it by helping other users.
                   Thus, the questions and answers given to each user's abilities can be easily viewed and evaluated.
-                   As Linkedin-Skills, we believe in the mission of Linkedin's social network, and wish that the
+                   As Skills-Support, we believe in the mission of Linkedin's social network, and wish that the
                    opportunities which available here are offered in Linkedin.
                 </p>
-                <p class=\"mt-4 mb-2\">Adventages of Linkedin-Skills Portal:</p>
+                <p class=\"mt-4 mb-2\">Adventages of Skills-Support Portal:</p>
                 <ol class=\"list-group\">
                     <li class=\"list-group-item\">
                         Address your skill question directly to those who specialize in the field and answer your
