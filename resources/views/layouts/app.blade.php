@@ -4,8 +4,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Meta Information -->
+    <meta name="description" content="Skills-Support: Improve your skills, Help community!">
+    <meta name="keywords" content="skills, support, improve, ask, help, community, people">
+    <meta name="author" content="Nadir Musayev">
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <!-- Content Sharing -->
+    <meta property="og:title" content="Improve your skills, Help community!">
+    <meta property="og:site_name" content="skills-support">
+    <meta property="og:url" content="https://skills-support.com">
+    <meta property="og:description" content="Improve your skills, Help community!">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="{{ URL::asset('images/logo.png') }}">
+
+    <link rel="icon" href="{{ URL::asset('images/logo.png') }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 

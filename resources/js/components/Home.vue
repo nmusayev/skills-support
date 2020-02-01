@@ -7,7 +7,7 @@
 
                     <div class="card-body">
                         <div class="info-banner mb-3">
-                            Linkedin-Skills
+                            Skills-Support
                         </div>
                         <div v-html="translate('site.content.home')">
                         </div>
