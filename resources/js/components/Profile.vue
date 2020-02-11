@@ -106,7 +106,7 @@
                                         </div>
                                         <div class="col-sm-8">
                                             <div class="row text-center">
-                                                <div class="col-sm-5 offset-1 mt-4">
+                                                <div class="col-12 col-sm-5 offset-md-1 mt-4">
                                                     <h5>{{ translate('site.label.answered') }}</h5>
                                                     <a href="#" data-toggle="modal"
                                                        @click="modalShowing = 'answers'"
@@ -114,7 +114,7 @@
                                                         {{ Object.keys(this.answers).length }}
                                                     </a>
                                                 </div>
-                                                <div class="col-sm-5 mt-4">
+                                                <div class="col-12 col-sm-5 mt-4">
                                                     <h5>{{ translate('site.label.asked') }}</h5>
                                                     <a href="#" data-toggle="modal"
                                                        @click="modalShowing = 'questions'"
