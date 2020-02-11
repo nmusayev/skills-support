@@ -267,29 +267,32 @@
         },
         methods: {
             addSkill() {
-                axios.post('/skill', {
-                    'name': $(".skills-select").select2('data')[0]['text'],
-                }).then(res => {
-                    this.skill = '';
+                // Check skill written, then add btn clicked
+                if($(".skills-select").select2('data')[0]['id'] !== '') {
+                    axios.post('/skill', {
+                        'name': $(".skills-select").select2('data')[0]['text'],
+                    }).then(res => {
+                        this.skill = '';
 
-                    let skill = res.data.success;
-                    this.skills.push(skill);
+                        let skill = res.data.success;
+                        this.skills.push(skill);
 
-                    this.flashMessage.success({
-                        title: 'Success Message',
-                        message: 'Skill successfully added!',
+                        this.flashMessage.success({
+                            title: 'Success Message',
+                            message: 'Skill successfully added!',
+                        });
+                    }).catch(err => {
+                        let error = err.response.data.message;
+
+                        this.flashMessage.show({
+                            status: 'error',
+                            title: 'Error Message',
+                            message: error,
+                        })
+                    }).finally(function () {
+                        $(".skills-select").val('').trigger('change');
                     });
-                }).catch(err => {
-                    let error = err.response.data.message;
-
-                    this.flashMessage.show({
-                        status: 'error',
-                        title: 'Error Message',
-                        message: error,
-                    })
-                }).finally(function () {
-                    $(".skills-select").val('').trigger('change');
-                });
+                }
             },
             detachSkillFromUser() {
                 let result = confirm("Are you sure to delete selected skill?");
