@@ -1,5 +1,5 @@
 <template>
-    <form action="" id="addQuestionForm" @submit.prevent="addQuestion" method="post">
+    <form action="" id="addQuestionForm" class="mb-4" @submit.prevent="addQuestion" method="post">
         <div class="form-group">
             <label for="title">{{ translate('site.label.q_title') }}</label>
             <input class="form-control" name="title" v-model="form.title"

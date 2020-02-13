@@ -156,20 +156,26 @@ class QuestionController extends Controller
     }
 
     public function recent() {
-        // Getting Language and Skill Related Questions
-        // 1. Getting Auth User's Skill IDs
-        $user_skill_ids = auth()->user()->skills->pluck('id')->toArray();
+        // Check for Authenticated or Not
+        if(auth('api')->check()) {
+            // Getting Language and Skill Related Questions
+            // 1. Getting Auth User's Skill IDs
+            $user_skill_ids = auth('api')->user()->skills->pluck('id')->toArray();
 
-        // 2. Querying Question for Skills and Language
+            // 2. Querying Question for Skills and Language
 //        $relatedQuestions = Question::whereHas('skills', function(Builder $query) use ($user_skill_ids) {
 //            $query->whereIn('skills.id', $user_skill_ids);
 //        })->whereIn('language_id', auth()->user()->languages->pluck('id')->toArray())
 //            ->orderBy('created_at', 'desc')->paginate(10);
 
-        // For Now, just Language Related Questions
-        $relatedQuestions = Question::whereIn('language_id', auth()->user()->languages->pluck('id')->toArray())
-            ->orderBy('created_at', 'desc')->paginate(15);
+            // For Now, just Language Related Questions
+            $relatedQuestions = Question::whereIn('language_id', auth('api')->user()->languages->pluck('id')->toArray())
+                ->orderBy('created_at', 'desc')->paginate(15);
 //        $relatedQuestions = [];
+        } else {
+            $relatedQuestions = Question::paginate(15);
+        }
+
 
         return QuestionResource::collection($relatedQuestions);
     }

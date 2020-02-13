@@ -6,9 +6,9 @@
                     <div class="card-header">{{ translate('site.heading.community') }}</div>
 
                     <div class="card-body">
-                        <add-question></add-question>
+                        <add-question v-if="loggedIn > 0"></add-question>
 
-                        <h5 class="mt-4 mb-3" v-if="labelShow">{{ translate('site.label.recently_asked') }}:</h5>
+                        <h5 class="mb-3" v-if="labelShow">{{ translate('site.label.recently_asked') }}:</h5>
                         <div class="recent-questions">
                             <router-link tag="div"
                                          v-for="question in questions.data"
@@ -49,6 +49,11 @@
                 labelShow: true,
             }
         },
+        computed: {
+            loggedIn() {
+                return helpers.loggedIn();
+            }
+        },
         methods: {
             // Our method to GET results from a Laravel endpoint
             getQuestions(page = 1) {
@@ -71,7 +76,7 @@
         },
         mounted() {
             // Check for Authentication [Redirecting if not logged in]
-            helpers.redirectIfNotLoggedId(this.$router);
+            // helpers.redirectIfNotLoggedId(this.$router);
 
             // Getting Recently Questions
             this.getQuestions();

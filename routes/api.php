@@ -35,7 +35,6 @@ Route::group(['middleware' => 'auth:api'], function()
 
     // CREATE, RECENT, SPECIFIC, UPDATE and DELETE QUESTION
     Route::post('question', 'QuestionController@store');
-    Route::get('question/recent', 'QuestionController@recent');
     Route::put('question/{question}', 'QuestionController@update');
     Route::delete('question/{question}', 'QuestionController@destroy');
 
@@ -64,6 +63,10 @@ Route::get('skill/user/{user}', 'SkillController@skillsWithId');
 Route::get('language/user/{user}', 'LanguageController@languagesWithId');
 Route::get('skill/general/user/{user}', 'SkillController@generalWithId');
 Route::get('skill/{skill}/user/{user}', 'SkillController@showWithId');
+
+
+// Getting Questions
+Route::get('/question/recent', 'QuestionController@recent');
 
 // Question-Detail
 Route::get('question/{question}', 'QuestionController@show');

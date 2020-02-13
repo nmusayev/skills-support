@@ -81,6 +81,11 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a exact-active-class="active" href="/community" class="nav-link">
+                                {{ __('site.nav.community') }}
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ route('login') }}">{{ __('site.nav.login') }}</a>
                         </li>
                         @if (Route::has('register'))
