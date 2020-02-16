@@ -19,8 +19,9 @@ class UserResource extends JsonResource
             'name' => $this->name,
             'profile_image' => asset('storage/' . $this->profile_image),
             'email' => $this->email,
-            'linkedin_profile' => $this->linkedin_profile,
+//            'linkedin_profile' => $this->linkedin_profile,
             'overall_point' => $this->overallPoint,
+            'view_count' => $this->view_count,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ];

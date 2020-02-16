@@ -7,10 +7,10 @@
         </h5>
         <p>
             <span v-if="limited && question.content">
-                {{ question.content.substring(0, 180) }}
+                <pre>{{ question.content.substring(0, 180) }}</pre>
             </span>
             <span v-else>
-                {{ question.content }}
+                <pre>{{ question.content }}</pre>
             </span>
         </p>
         <div class="row">

@@ -55,6 +55,7 @@ return [
         'next' => 'Next',
         'your_answer' => 'Your Answer',
         'answer_placeholder' => 'Your answer here..',
+        'view_count' => "Profile View Count",
     ],
     'heading' => [
         'login' => 'Login',

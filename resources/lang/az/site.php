@@ -55,6 +55,7 @@ return [
         'next' => 'Sonra',
         'your_answer' => 'Sizin Cavabınız',
         'answer_placeholder' => 'Sizin cavabınız buraya..',
+        'view_count' => "Profilə Baxış Sayı",
     ],
     'heading' => [
         'login' => 'Daxil ol',

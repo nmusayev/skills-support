@@ -18,42 +18,46 @@
                                 <div class="col-sm-8">
                                     <ul class="list-unstyled">
                                         <li>
-                                            <h2>{{ this.name }}</h2>
+                                            <h2 class="font-weight-bold mt-1 text-primary">{{ this.name }}</h2>
                                         </li>
-                                        <li>{{ translate('site.label.point') }}: {{ this.overall_point }}</li>
-                                        <li>
-                                            <div v-if="!linkedin_editing">
-                                                <a :href="linkedin_profile"
-                                                   target="_blank"
-                                                   class="btn btn-info linkedin-profile">
-                                                    {{ translate('site.label.profile') }}
-                                                </a>
-                                                <a v-if="profileOwner" href="" @click.prevent="showLinkedinInput()">
-                                                    <i style="font-size: 30px; position: relative; top: 8px"
-                                                       class="fa fa-pencil-square-o"
-                                                       aria-hidden="true"></i>
-                                                </a>
-                                            </div>
-                                            <div v-else>
-                                                <input v-model="linkedin_profile_new"
-                                                       class="d-block w-100 mt-2"
-                                                       @keyup.enter="updateLinkedinLink()"
-                                                       type="text"/>
-                                                <div class="mt-2">
-                                                    <button
-                                                        @click="updateLinkedinLink()"
-                                                        class="btn btn-success">
-                                                        {{ translate('site.label.update_profile') }}
-                                                    </button>
-                                                    <button
-                                                        @click="cancelLinkedinEditing()"
-                                                        class="btn btn-info text-white">
-                                                        {{ translate('site.btn.cancel') }}
-                                                    </button>
-                                                </div>
-                                            </div>
-
+                                        <li class="font-weight-bold text-secondary">
+                                            {{ translate('site.label.view_count') }}: {{ this.view_count }}
                                         </li>
+                                        <li class="font-weight-bold text-secondary">
+                                            {{ translate('site.label.point') }}: {{ this.overall_point }}
+                                        </li>
+<!--                                        <li>-->
+<!--                                            <div v-if="!linkedin_editing">-->
+<!--                                                <a :href="linkedin_profile"-->
+<!--                                                   target="_blank"-->
+<!--                                                   class="btn btn-info linkedin-profile">-->
+<!--                                                    {{ translate('site.label.profile') }}-->
+<!--                                                </a>-->
+<!--                                                <a v-if="profileOwner" href="" @click.prevent="showLinkedinInput()">-->
+<!--                                                    <i style="font-size: 30px; position: relative; top: 8px"-->
+<!--                                                       class="fa fa-pencil-square-o"-->
+<!--                                                       aria-hidden="true"></i>-->
+<!--                                                </a>-->
+<!--                                            </div>-->
+<!--                                            <div v-else>-->
+<!--                                                <input v-model="linkedin_profile_new"-->
+<!--                                                       class="d-block w-100 mt-2"-->
+<!--                                                       @keyup.enter="updateLinkedinLink()"-->
+<!--                                                       type="text"/>-->
+<!--                                                <div class="mt-2">-->
+<!--                                                    <button-->
+<!--                                                        @click="updateLinkedinLink()"-->
+<!--                                                        class="btn btn-success">-->
+<!--                                                        {{ translate('site.label.update_profile') }}-->
+<!--                                                    </button>-->
+<!--                                                    <button-->
+<!--                                                        @click="cancelLinkedinEditing()"-->
+<!--                                                        class="btn btn-info text-white">-->
+<!--                                                        {{ translate('site.btn.cancel') }}-->
+<!--                                                    </button>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </li>-->
                                         <li v-if="profileOwner">
                                             <label for="file-upload"
                                                    class="btn mt-2 bg-warning  custom-file-upload">
@@ -249,10 +253,11 @@
             return {
                 name: '',
                 location: '',
-                linkedin_profile: '#',
-                linkedin_profile_new: '',
-                linkedin_editing: false,
+                // linkedin_profile: '#',
+                // linkedin_profile_new: '',
+                // linkedin_editing: false,
                 overall_point: 0,
+                view_count: 0,
                 skills: [],
                 skill: null,
                 active_skill_id: 0,
@@ -418,38 +423,38 @@
                     });
                 }
             },
-            showLinkedinInput() {
-                this.linkedin_editing = true;
-            },
-            cancelLinkedinEditing() {
-                this.linkedin_editing = false;
-            },
-            updateLinkedinLink() {
-                axios.put('/user', {
-                    'linkedin_profile': this.linkedin_profile_new
-                }).then(res => {
-                    let user = res.data.success;
-                    // console.log(user);
-
-                    this.linkedin_profile = user.linkedin_profile;
-                    this.linkedin_profile_new = this.linkedin_profile;
-                    this.linkedin_editing = false;
-
-                    this.flashMessage.success({
-                        title: 'Success Message',
-                        message: 'Linkedin Profile successfully updated!',
-                    });
-                }).catch(err => {
-                    let error = err.response.data.message;
-                    this.linkedin_editing = false;
-
-                    this.flashMessage.show({
-                        status: 'error',
-                        title: 'Error Message',
-                        message: error,
-                    });
-                });
-            },
+            // showLinkedinInput() {
+            //     this.linkedin_editing = true;
+            // },
+            // cancelLinkedinEditing() {
+            //     this.linkedin_editing = false;
+            // },
+            // updateLinkedinLink() {
+            //     axios.put('/user', {
+            //         'linkedin_profile': this.linkedin_profile_new
+            //     }).then(res => {
+            //         let user = res.data.success;
+            //         // console.log(user);
+            //
+            //         this.linkedin_profile = user.linkedin_profile;
+            //         this.linkedin_profile_new = this.linkedin_profile;
+            //         this.linkedin_editing = false;
+            //
+            //         this.flashMessage.success({
+            //             title: 'Success Message',
+            //             message: 'Linkedin Profile successfully updated!',
+            //         });
+            //     }).catch(err => {
+            //         let error = err.response.data.message;
+            //         this.linkedin_editing = false;
+            //
+            //         this.flashMessage.show({
+            //             status: 'error',
+            //             title: 'Error Message',
+            //             message: error,
+            //         });
+            //     });
+            // },
             getUserDetails(user_id) {
                 axios.get('/user/' + user_id)
                     .then(res => {
@@ -458,9 +463,10 @@
 
                         this.name = user.name;
                         this.imageUrl = user.profile_image;
-                        this.linkedin_profile = user.linkedin_profile;
-                        this.linkedin_profile_new = this.linkedin_profile;
+                        // this.linkedin_profile = user.linkedin_profile;
+                        // this.linkedin_profile_new = this.linkedin_profile;
                         this.overall_point = user.overall_point;
+                        this.view_count = user.view_count;
                     })
                     .catch(err => {
                         console.log(err);

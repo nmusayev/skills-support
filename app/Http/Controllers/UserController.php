@@ -67,6 +67,9 @@ class UserController extends Controller
     }
 
     public function detailsWithId(User $user) {
+        $user->view_count++;
+        $user->save();
+
         return response()->json(['success' => new UserResource($user)], $this->successStatus);
     }
 
