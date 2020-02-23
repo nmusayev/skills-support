@@ -18,7 +18,7 @@
     <meta property="og:url" content="https://skills-support.com">
     <meta property="og:description" content="Improve your skills, Help community!">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="{{ URL::asset('images/logo.png') }}">
+    <meta property="og:image" content="{{ URL::asset('images/LOGO.png') }}">
 
     <link rel="icon" href="{{ URL::asset('images/logo.png') }}">
 
