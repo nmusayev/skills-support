@@ -173,7 +173,7 @@ class QuestionController extends Controller
                 ->orderBy('created_at', 'desc')->paginate(15);
 //        $relatedQuestions = [];
         } else {
-            $relatedQuestions = Question::paginate(15);
+            $relatedQuestions = Question::orderBy('created_at', 'desc')->paginate(15);
         }
 
 

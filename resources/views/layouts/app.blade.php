@@ -22,7 +22,7 @@
 
     <link rel="icon" href="{{ URL::asset('images/logo.png') }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Skills-Support: Improve your skills, Help community!</title>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -57,7 +57,7 @@
 
                 </ul>
 
-                <ul class="navbar-nav ml-auto">
+                <div class="navbar-nav ml-auto">
                     <form id="search-form" action="/search-results/" method="get" class="form-inline">
                         <input id="search-input" class="form-control" type="text"
                                name="search-key" placeholder="{{ __('site.label.search_here') }}">
@@ -69,7 +69,7 @@
                             Search
                         </a>
                     </form>
-                </ul>
+                </div>
 
             <!-- Right Side Of Navbar -->
                 <ul class="navbar-nav ml-auto">
@@ -96,9 +96,9 @@
 
                         <li class="nav-item">
                             <div class="btn-group">
-                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"
+                                <button type="button" class="btn dropdown-toggle text-white" data-toggle="dropdown"
                                         aria-haspopup="true" aria-expanded="false">
-                                    {{ config('app.locales')[app()->getLocale()] }}
+                                    <b>{{ config('app.locales')[app()->getLocale()] }}</b>
                                 </button>
                                 <div class="dropdown-menu languages">
                                     @foreach(config('app.locales') as $index => $name)
@@ -129,9 +129,9 @@
                         </li>
                         <li class="nav-item">
                             <div class="btn-group">
-                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"
+                                <button type="button" class="btn dropdown-toggle text-white" data-toggle="dropdown"
                                         aria-haspopup="true" aria-expanded="false">
-                                    {{ config('app.locales')[app()->getLocale()] }}
+                                    <b>{{ config('app.locales')[app()->getLocale()] }}</b>
                                 </button>
                                 <div class="dropdown-menu languages">
                                     @foreach(config('app.locales') as $index => $name)
