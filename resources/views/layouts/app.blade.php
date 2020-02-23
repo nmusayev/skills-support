@@ -20,7 +20,7 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="{{ URL::asset('images/LOGO.png') }}">
 
-    <link rel="icon" href="{{ URL::asset('images/logo.png') }}">
+    <link rel="icon" href="{{ URL::asset('images/LOGO.png') }}">
 
     <title>Skills-Support: Improve your skills, Help community!</title>
 
