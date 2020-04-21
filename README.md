@@ -3,6 +3,24 @@
 Skills-Support is a project which aimed to help people who wants to improve their skills by asking questions, getting 
 advice from experts and people who wants to share their experience to the community. This is point based system.
 
+## How to start?
+
+You want to contribute to the project but do not know how to start? 
+1. Just fork the project, and clone it to your local machine.
+2. Run `composer install` , `npm install` , and `npm run dev`  on project's main directory.
+3. Create .env file. Copy all content of .env.example and paste to .env. (In linux based system just run `cp .env.example .env`)
+4. Create database and setup your database connection in .env file: 
+    ``` 
+    DB_DATABASE=db_name
+    DB_USERNAME=db_username
+    DB_PASSWORD=db_password
+    ```
+5. Run `php artisan key:generate` in order to generating application key.
+6. Finally, run `php artisan migrate` in order to migrating migration files and creating tables in database.
+
+
+## More Info about Project
+
 - After registering you will have profile. You can add your skills and languages there. When you add question you will get some amount of point for that skill.
    
    ![alt text](public/images/screens/auth_profile.png "Title Text 1")
@@ -31,18 +49,5 @@ advice from experts and people who wants to share their experience to the commun
    
    ![alt text](public/images/screens/auth_notifications.png "Title Text 1")
 
-## How to start?
 
-You want to contribute to the project but do not know how to start? 
-1. Just fork the project, and clone it to your local machine.
-2. Run `composer install` and `npm install` on project's main directory.
-3. Create .env file. Copy all content of .env.example and paste to .env. (In linux based system just run `cp .env.example .env`)
-4. Create database and setup your database connection in .env file: 
-    ``` 
-    DB_DATABASE=db_name
-    DB_USERNAME=db_username
-    DB_PASSWORD=db_password
-    ```
-5. Run `php artisan key:generate` in order to generating application key.
-6. Finally, run `php artisan migrate` in order to migrating migration files and creating tables in database.
 
