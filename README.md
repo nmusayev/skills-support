@@ -16,26 +16,18 @@ advice from experts and people who wants to share their experience to the commun
 - Your asked or answered questions for each skill will be shown in your profile.
 
    ![alt text](public/images/screens/auth_answers.png "Title Text 1")
-   
-   ![alt text](public/images/screens/auth_questions.png "Title Text 1")
-   
+      
    
 - If someone make your answer as best answer, You will be awarded 100 points for skills that related to question.
 - You can search for other profiles and even view other people's profiles with asked and answered questions for each skill.
    
    ![alt text](public/images/screens/users.png "Title Text 1")
    
-   ![alt text](public/images/screens/profile.png "Title Text 1")
-   
    
 - You can view answers of community, or even search for specific question.
-
-   ![alt text](public/images/screens/community.png "Title Text 1")
    
    
 - Asking question by choosing your language and skills. Only matched people will be notified for helping You.
-   
-   ![alt text](public/images/screens/auth_community.png "Title Text 1")
    
    ![alt text](public/images/screens/auth_notifications.png "Title Text 1")
 
