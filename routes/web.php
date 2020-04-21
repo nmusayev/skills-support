@@ -18,6 +18,11 @@ Route::get('locale/{locale}', function ($locale){
     return redirect()->back();
 })->name('setLanguage');
 
+// temporarily redirected to community page
+Route::get('/', function () {
+    return redirect('/community');
+});
+
 Route::get('/{any}', function () {
     return view('portal.portal-app');
 })->where('any', '.*');

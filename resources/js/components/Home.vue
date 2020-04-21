@@ -6,9 +6,9 @@
                     <div class="card-header">{{ translate('site.heading.home') }}</div>
 
                     <div class="card-body">
-                        <div class="info-banner mb-3">
-                            Skills-Support
-                        </div>
+<!--                        <div class="info-banner mb-3">-->
+<!--                            Skills-Support-->
+<!--                        </div>-->
                         <div v-html="translate('site.content.home')">
                         </div>
                     </div>
