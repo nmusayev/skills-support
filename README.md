@@ -54,5 +54,3 @@ You want to contribute to the project but do not know how to start?
 5. Run `php artisan key:generate` in order to generating application key.
 6. Finally, run `php artisan migrate` in order to migrating migration files and creating tables in database.
 
-
-## Laravel Sponsors
