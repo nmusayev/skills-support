@@ -2,6 +2,7 @@
 
 Skills-Support is a project which aimed to help people who wants to improve their skills by asking questions, getting 
 advice from experts and people who wants to share their experience to the community. This is point based system.
+Application is developed by using Laravel and Vue.js Frameworks.
 
 ## How to start?
 
@@ -17,7 +18,7 @@ You want to contribute to the project but do not know how to start?
     ```
 5. Run `php artisan key:generate` in order to generating application key.
 6. Finally, run `php artisan migrate` in order to migrating migration files and creating tables in database.
-
+7. Make your changes and create new pull request.
 
 ## More Info about Project
 
